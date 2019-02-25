@@ -6,19 +6,17 @@ public class NumberWizard : MonoBehaviour
 {
     [SerializeField] int max;
     [SerializeField] int min;
-    [SerializeField] int guess;
+    int guess;
     
     void Start()
     {
-            StartGame();
+        StartGame();
     }
 
     void StartGame()
     {
-        max = 1000;
-        min = 1;
-        guess = 500;
         max = max + 1;
+        guess = (max + min) / 2;
     }
 
     public void OnPressHigher()
